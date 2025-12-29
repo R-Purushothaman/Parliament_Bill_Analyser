@@ -16,7 +16,7 @@ st.subheader("Simplifying Government Bills for Every Citizen")
 
 # API Key config
 
-genai.configure(api_key="AIzaSyB_ogqJxeQHosDnbC70KIU3XTIQbHChaos")
+genai.configure(api_key=os.getenv("GEMINI_API_KEY"))
 model = genai.GenerativeModel(model_name="models/gemini-2.5-flash")
 
 
@@ -161,4 +161,5 @@ if uploaded_file:
 
 st.markdown("---")
 st.caption("CivicTech & Public Policy Analytics")
+
 
